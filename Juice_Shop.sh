@@ -2,7 +2,7 @@
 
 # update apt-get
 export DEBIAN_FRONTEND="noninteractive"
-sudo apt-get update
+sudo apt-get update -y
 
 # remove previously installed Docker
 sudo apt-get remove docker docker-engine docker.io* lxc-docker*
@@ -15,10 +15,9 @@ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 
 echo "deb https://download.docker.com/linux/debian stretch stable" >> /etc/apt/sources.list 
 
-sudo apt-get update
 
 # install Docker
-sudo apt-get install docker-ce
+sudo apt-get -y install docker-ce
 
 # run Hellow World image
 sudo docker run hello-world
