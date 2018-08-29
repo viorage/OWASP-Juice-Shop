@@ -2,7 +2,7 @@
 
 # update apt-get
 export DEBIAN_FRONTEND="noninteractive"
-sudo apt-get update -y
+sudo apt-get -y update 
 
 # remove previously installed Docker
 sudo apt-get remove docker docker-engine docker.io* lxc-docker*
